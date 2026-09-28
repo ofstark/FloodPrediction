@@ -1,0 +1,68 @@
+import type { AlertItem } from "@/types";
+
+export const alerts: AlertItem[] = [
+  {
+    id: "alert-1",
+    title: "CRITICAL RISK DETECTED",
+    location: "Kedarnath",
+    severity: "CRITICAL",
+    timestamp: "12 minutes ago",
+    status: "ACTIVE",
+    description:
+      "Elevated flood probability driven by sustained rainfall and rising river discharge in the Mandakini valley.",
+  },
+  {
+    id: "alert-2",
+    title: "HIGH RISK DETECTED",
+    location: "Chamoli",
+    severity: "HIGH",
+    timestamp: "18 minutes ago",
+    status: "ACTIVE",
+    description: "Rainfall and soil saturation trending upward in the Alaknanda valley.",
+  },
+  {
+    id: "alert-3",
+    title: "RIVER DISCHARGE RISING",
+    location: "Rudraprayag",
+    severity: "HIGH",
+    timestamp: "28 minutes ago",
+    status: "ACTIVE",
+    description: "Combined Alaknanda-Mandakini discharge rising near the confluence.",
+  },
+  {
+    id: "alert-4",
+    title: "ELEVATED CONDITIONS",
+    location: "Joshimath",
+    severity: "MODERATE",
+    timestamp: "41 minutes ago",
+    status: "MONITORING",
+    description: "Rainfall accumulation trending upward over the last 6 hours.",
+  },
+  {
+    id: "alert-5",
+    title: "SOIL SATURATION ELEVATED",
+    location: "New Tehri",
+    severity: "MODERATE",
+    timestamp: "1 hour ago",
+    status: "MONITORING",
+    description: "Soil moisture rising near the Bhagirathi valley, reducing runoff absorption.",
+  },
+  {
+    id: "alert-6",
+    title: "RISK LEVEL NORMALIZED",
+    location: "Rishikesh",
+    severity: "LOW",
+    timestamp: "2 hours ago",
+    status: "RESOLVED",
+    description: "Conditions returned to baseline after an earlier moderate advisory.",
+  },
+  {
+    id: "alert-7",
+    title: "MONITORING STATION OFFLINE",
+    location: "Haridwar",
+    severity: "INFO",
+    timestamp: "3 hours ago",
+    status: "RESOLVED",
+    description: "Monitoring station reconnected after a brief outage.",
+  },
+];
