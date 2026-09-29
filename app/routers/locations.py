@@ -4,7 +4,7 @@ from app.data.zones import ZONES
 from app.models.schemas import MonitoringZone
 from app.services.prediction import build_all_predictions
 
-router = APIRouter(prefix="/api", tags=["locations"], dependencies=[Depends(get_current_user)])
+router = APIRouter(prefix="/api", tags=["locations"])
 
 
 @router.get("/locations", response_model=list[MonitoringZone])
