@@ -5,7 +5,7 @@ from app.data.zones import ZONES
 from app.models.schemas import AlertItem
 from app.services.prediction import build_all_predictions
 
-router = APIRouter(prefix="/api", tags=["alerts"], dependencies=[Depends(get_current_user)])
+router = APIRouter(prefix="/api", tags=["alerts"])
 
 # NOTE: this derives alerts live from current risk levels on every call.
 # For real alert history (resolved alerts, "12 minutes ago" timestamps
