@@ -3,7 +3,7 @@ from app.deps import get_current_user
 from app.data import geography
 from app.models.schemas import GeographyResponse, SettlementOut
 
-router = APIRouter(prefix="/api", tags=["geography"], dependencies=[Depends(get_current_user)])
+router = APIRouter(prefix="/api", tags=["geography"])
 
 
 @router.get("/geography", response_model=GeographyResponse)
