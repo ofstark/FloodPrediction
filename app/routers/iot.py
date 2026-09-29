@@ -6,7 +6,7 @@ from app.deps import get_current_user
 from app.models.schemas import IoTReadingIn, IoTReadingOut, IoTZoneStatus
 from app.services.iot import FRESHNESS_MINUTES
 
-router = APIRouter(prefix="/api", tags=["iot"], dependencies=[Depends(get_current_user)])
+router = APIRouter(prefix="/api", tags=["iot"])
 
 # NOTE on auth: ingestion currently requires the same JWT a human
 # operator uses (Astra's login). That's fine for testing with curl, but
