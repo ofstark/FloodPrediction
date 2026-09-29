@@ -3,7 +3,7 @@ from app.db import get_connection
 from app.deps import get_current_user
 from app.models.schemas import HistoricalEventOut, HistoricalEventIn
 
-router = APIRouter(prefix="/api", tags=["historical"], dependencies=[Depends(get_current_user)])
+router = APIRouter(prefix="/api", tags=["historical"])
 
 
 def _row_to_event(row) -> HistoricalEventOut:
