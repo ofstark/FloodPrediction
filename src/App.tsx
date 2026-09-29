@@ -18,11 +18,7 @@ import Settings from "@/pages/Settings";
 // AUTH TEMPORARILY DISABLED — wrap with <ProtectedRoute> again once
 // login is confirmed working end-to-end against the deployed backend.
 function protectedPage(el: ReactNode) {
-  return (
-    <ProtectedRoute>
-      <PageContainer>{el}</PageContainer>
-    </ProtectedRoute>
-  );
+  return <PageContainer>{el}</PageContainer>;
 }
 
 export default function App() {
