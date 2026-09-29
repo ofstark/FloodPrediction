@@ -3,6 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from app.config import settings
 from app.db import init_db
 from app.routers import predictions, locations, alerts, geography, auth, model, historical, iot
+from fastapi import Response
 
 app = FastAPI(
     title="FloodGuard AI API",
@@ -44,7 +45,11 @@ app.include_router(iot.router)
 async def root():
     return {"status": "ok", "service": "FloodGuard AI API"}
 
-
 @app.get("/health")
+@app.head("/health")
 async def health():
-    return {"status": "operational"}
+    return Response(
+        content='{"status":"operational"}',
+        media_type="application/json",
+        status_code=200,
+    )
