@@ -4,7 +4,7 @@ from app.data.zones import ZONES
 from app.models.schemas import FloodPrediction, PredictRequest
 from app.services.prediction import build_all_predictions, build_prediction
 
-router = APIRouter(prefix="/api", tags=["predictions"], dependencies=[Depends(get_current_user)])
+router = APIRouter(prefix="/api", tags=["predictions"])
 
 
 @router.get("/predictions", response_model=list[FloodPrediction])
